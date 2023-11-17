@@ -1,0 +1,23 @@
+
+# landing_page window
+landing_page_window = Window(app, title="landing page.",bg = "white", height="760", width="1100")
+landing_page_window.tk.resizable(False, False)
+box = Box(landing_page_window, align="top", width="fill", layout="grid", border=True)
+picture = Picture(box, image="logo.png",height=80, width=80, align="left", grid=[0, 1])
+space = Text(box, text = "", width="10", grid=[1, 1])
+book = PushButton(box, text="Book", command=booking, grid=[2, 1], height="3", width=20)
+view_booking_landing = PushButton(box, text="View Bookings", command=booking_view, grid=[3, 1], height="3", width=20)
+settings1 = PushButton(box, text="Settings",command=settings, grid=[4, 1], height="3", width=20)
+space = Text(box, text = "", width="5", grid=[5, 1])
+log_out = PushButton(box, text="Log Out", command=go_back_main, grid=[6, 1], height="3", width=20)
+space = Text(landing_page_window, text = "", size="5")
+welcome_message = Text(landing_page_window, text=f"Welcome to your booker homepage {username_box_1.value}", color="#2596be", font="bold") # gets the username of the user logged in and displays it in a message
+welcome_message.tk.config(font=("Ariel", 16, "bold", "underline"))
+space = Text(landing_page_window, text = "", size="20")
+main_picture = Picture(landing_page_window, image="holiday.jpg",height=450, width=900)
+space = Text(landing_page_window, text = "", size="5")
+box2 = Box(landing_page_window, align="bottom", width="fill", layout="grid", border=True)
+space = Text(box2, text = "", width="40", grid=[0, 1])
+footer_logo = Picture(box2, image="logo.png",height=50, width=50, align="left", grid=[1, 1])
+copyright = Text(box2, text = "Copyright © Booker 2023", color="#2596be", grid=[2, 1])
+landing_page_window.hide()

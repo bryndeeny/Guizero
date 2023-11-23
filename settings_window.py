@@ -33,6 +33,22 @@ space = Text(settings_window, text = "", size="5")
 new_password_box = TextBox(settings_window, width="23", hide_text = True)
 space = Text(settings_window, text = "", size="5")
 submit_settings = PushButton(settings_window, text = "Submit", command=password_reset, width="17")
+# Subscription title
+subscription_title = Text(settings_window, text="Subscription Settings", color="#2596be")
+subscription_title.tk.config(font=("Ariel", 16, "bold"))
+space = Text(settings_window, text="", size="20")
+
+# Subscription button
+subscribe_button = PushButton(settings_window, text="Subscribe", command=subscribe_user, width=27)
+space = Text(settings_window, text="", size="5")
+
+# Subscription information
+subscription_info = Text(settings_window, text="", color="#2596be")
+space = Text(settings_window, text="", size="5")
+
+# Confirm subscription button
+confirm_subscription_button = PushButton(settings_window, text="Confirm Subscription", command=confirm_subscription, width=27)
+space = Text(settings_window, text="", size="20")
 box3 = Box(settings_window, align="bottom", width="fill", layout="grid", border=True)
 space = Text(box3, text = "", width="40", grid=[0, 1])
 footer_logo = Picture(box3, image="logo.png",height=50, width=50, align="left", grid=[1, 1])
